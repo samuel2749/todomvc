@@ -1,17 +1,9 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Template • TodoMVC</title>
-		<link rel="stylesheet" href="assets/css/base.css">
-		<link rel="stylesheet" href="assets/css/index.css">
-	</head>
-	<body>
+
 		<section class="todoapp">
 			<header class="header">
         <app-title></app-title>
-				<input class="new-todo" placeholder="What needs to be done?" autofocus>
+				<input class="new-todo" placeholder="What needs to be done?" autofocus
+        [placeholder]="inputHint" #addInput (keyup.enter)="keywordAdd(addInput.value)">
 			</header>
 			<!-- This section should be hidden by default and shown when there are todos -->
 			<section class="main">
@@ -66,5 +58,4 @@
 			<p>Created by <a href="http://todomvc.com">you</a></p>
 			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 		</footer>
-	</body>
-</html>
+
