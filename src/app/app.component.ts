@@ -10,8 +10,16 @@ export class AppComponent {
   todos = <any>[];
   todo = "";
 
-  keywordAdd(pVal){
-    this.todos.push(pVal);
+  keywordAdd(itme: HTMLInputElement){
+    let obj = { item:itme.value, done:false};
+    if(obj.item != ""){
+      this.todos.push(obj);
+    }
+
+    itme.value = "";
+
   }
+
+
 
 }
