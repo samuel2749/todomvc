@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   inputHint = "請輸入";
   todos = <any>[];
+  todo = "";
 
   keywordAdd(pVal){
     this.todos.push(pVal);
